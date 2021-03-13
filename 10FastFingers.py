@@ -3,13 +3,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 # Website of typing test
 URL = 'https://10fastfingers.com/typing-test/english'
 
 # Open chrome webdriver to full screen
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.maximize_window()
 driver.get(URL)
 

@@ -2,10 +2,11 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 URL = 'https://www.keybr.com/'
-driver = webdriver.Chrome()
+driver =  webdriver.Chrome(ChromeDriverManager().install())
 
 # Site where we want to do typing test
 driver.get(URL)
